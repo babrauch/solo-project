@@ -1,17 +1,10 @@
-/**
-Palette: https://scrimba.com/links/hometown-palette
-RED: #E63946
-LIGHT: #F1FAEE
-AQUA: #A8DADC
-LIGHT BLUE: #457B9D
-DARK BLUE: #1D3557
-
-*/
 
 @font-face {
     font-family: myCalligraphy;
     src: url("CalligraphyFLF.ttf")
 }
+
+
 
 
 body {
@@ -64,11 +57,16 @@ h3 {
     padding: 5px auto;
     margin: 5px 0 10px 0;
 }
-    
+@media screen and (max-width: 1000px) {
+  .container{
+      flex-direction: column;
+      width: 100%;
+  } 
+}   
 
 img {
-    width: 105.05px;
-    height: 101.98px;
+    width: 200px;
+    height: 200px;
     left: 85.47px;
     top: 108px;
     margin: 34px;
@@ -93,8 +91,9 @@ img {
 
 
 .business-card {
+    /* box-sizing should be border-box */
+    box-sizing: border-box;
     width: 600px;
-    height: 400px;
     left: 126px;
     top: 50px;
     margin: 0 auto;
@@ -109,24 +108,31 @@ img {
 }
 
 .card-img {
-    width: 100%;
-    height: 300px;
+    /* 50% width flex design */
+    flex: 1 1 50%;
+    height: auto;
     padding: 23px, 0, 23px, 0;
     border: 5px solid #6C4AB6;
 }
 
 .business-card p {
-    width: 900px;
-    height: 100px;
+    /* 50% width flex design */
+    flex: 1 1 50%;
     padding: 50px;
 }
+
+@media screen and (max-width: 650px) {
+  .business-card{
+    width: 100%;
+    flex-direction: column;
+  }
+  .card-img {
+    width: 200px;
+    margin: 40px auto;
+  }
+} 
 
 .my-name {
     font-family: myCalligraphy;
     font-size: 40px;
 }
-
-/*width: 400px;
-height: 294px;
-left: 126px;
-top: 50px;
